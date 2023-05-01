@@ -197,7 +197,6 @@ export const Planning = () => {
       <Form onSubmit={createPlan} id='form'>
         <Space direction='vertical' size={12}>
           <DatePicker
-            showTime
             onChange={(value, formated) => {
               setDate(formated);
             }}
