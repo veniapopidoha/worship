@@ -1,8 +1,7 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import { AuthContext } from '../../Auth';
-import { useState } from 'react/cjs/react.development';
 import { Card } from './Card';
 import { Button, Conteiner } from './Card/style';
 import moment from 'moment';
