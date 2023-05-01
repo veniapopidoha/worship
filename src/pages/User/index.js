@@ -43,20 +43,30 @@ export const User = () => {
       });
   };
 
-  const deleteDublicate = () => {
+  const deleteDublicateAll = () => {
     const deletedDublicates = [
       ...new Map(allTurn.map((v) => [v.date, v])).values(),
     ];
     setMyTurn(deletedDublicates);
   };
 
+  const deleteDublicateMain = () => {
+    const deletedDublicates = [
+      ...new Map(mainTurns.map((v) => [v.date, v])).values(),
+    ];
+    setMainTurns(deletedDublicates);
+  };
+
   useEffect(() => {
-    deleteDublicate();
+    deleteDublicateAll();
+    deleteDublicateMain();
   }, [allTurn]);
 
   useEffect(() => {
     getMyTurns();
   }, []);
+
+  console.log(myTurn)
 
   return (
     <Conteiner>

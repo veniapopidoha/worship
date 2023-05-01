@@ -12,9 +12,11 @@ const Home = () => {
   const [isAdmin, setIsAdmin] = useState(false);
 
   const admin = process.env.REACT_APP_ADMIN_NAME;
+  const admin2 = process.env.REACT_APP_ADMIN_NAME2;
+
 
   useEffect(() => {
-    if(currentUser.displayName == admin) {
+    if(currentUser.displayName == admin || currentUser.displayName == admin2) {
       setIsAdmin(true);
     }
   }, [])

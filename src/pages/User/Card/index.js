@@ -91,7 +91,11 @@ export const Card = (props) => {
           <Table2>
             <tbody>
               {data.songs.map((name) => {
-                return <tr>{name}</tr>;
+                return (
+                  <tr>
+                    <td>{name}</td>
+                  </tr>
+                );
               })}
             </tbody>
           </Table2>
